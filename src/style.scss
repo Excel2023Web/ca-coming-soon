@@ -1,0 +1,199 @@
+$theme-color: #2caec1;
+$theme-color-hover: #2ceeff;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Sora', sans-serif;
+    overflow: hidden;
+}
+
+#container {
+    height: 100vh;
+    background-color: #06243E;
+}
+
+#excel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 200px;
+
+    padding: 1rem 0 0 1rem;
+    color: white;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    
+    #excel-logo {
+        width: 100%;
+    }
+    @media only screen and (max-width: 576px) {
+        width: 100%;
+        height: 80px;
+        justify-content: center;
+        padding: 1rem 0;
+        
+        #excel-logo {
+            height: 100%;
+            width: auto;
+        }
+    }
+}
+
+#social-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90px;
+    height: 350px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    .social-link {
+        color: $theme-color;
+        font-size: 2rem;
+
+        &:hover {
+            color: $theme-color-hover;
+        }
+    }
+    @media only screen and (max-width: 900px) {
+        z-index: 2;
+        height: 70px;
+        width: 100%;
+        bottom: 0;
+        top: initial;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    @media only screen and (max-height: 440px) {
+        height: 50px;
+    }
+}
+
+#coming-soon {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 50%;
+    z-index: 1;
+
+    color: white;
+
+    min-width: 430px;
+    padding: 2rem;
+    p {
+        font-size: 3.5rem;
+    }
+
+    @media only screen and (max-width: 900px) {
+        top: auto;
+        bottom: 50%;
+        height: 80px;
+        min-width: auto;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        p {
+            font-size: 3.5rem;
+        }
+    }
+    @media only screen and (max-width: 576px) {
+        p {
+            font-size: 3rem;
+        }
+    }
+    @media only screen and (max-height: 440px) {
+        bottom: 35%;
+        p {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+#tagline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+
+    font-family: 'Baloo 2', cursive;
+
+    width: 50%;
+    max-height: 40%;
+    background-color: transparent;
+    color: $theme-color;
+
+    min-width: 520px;
+
+    padding: 2rem;
+    p {
+        font-size: 1.7rem;
+    }
+
+    @media only screen and (max-width: 900px) {
+        bottom: 70px;
+        min-width: auto;
+        width: inherit;
+        padding: 2rem 1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-size: 1.7rem;
+            text-align: center;
+        }
+    }
+    @media only screen and (max-width: 576px) {
+        p {
+            font-size: 1.4rem;
+        }
+    }
+    @media only screen and (max-height: 440px) {
+        bottom: 30px;
+        p {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+#aftermovie {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    #black-filter {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    video {
+        height: 100%;
+        @media (min-aspect-ratio: 16/9) {
+            height: auto;
+            width: 100%;
+        }
+    }
+}
